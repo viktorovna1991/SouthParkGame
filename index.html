@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>South Park Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        canvas {
+            position: absolute;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            border: 3px solid black;
+        }
+
+        img{
+            position: absolute;
+            top: 200px;
+            left: 38px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<img src="images/clouds.jpg" alt="d">
+
+<script src="game.js"></script>
+</body>
+</html>
