@@ -1,7 +1,6 @@
 // SELECT CVS
 const cvs = document.getElementById("game");
 const ctx = cvs.getContext("2d");
-ctx.scale(1,1);
 
 ctx.mozImageSmoothingEnabled = false;
 ctx.webkitImageSmoothingEnabled = false;
@@ -15,41 +14,53 @@ let frames = 0;
 const clouds = new Image();
 clouds.src = "images/clouds.jpg";
 
-const background = new Image();
-background.src = "images/bg.png";
+var wrapper = document.getElementById("wrapper");
+var background = document.createElement('img');
+var additionalBackground = document.createElement('img');
+var width = document.body.clientWidth;
 
-// // BACKGROUND
-// bg = {
-//     sX: 0,
-//     sY: 0,
-//     w: 1366,
-//     h: 768,
-//     x: 0,
-//     y: 0,
-//
-//     draw: function () {
-//         ctx.drawImage(background, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w * 0.17, this.h * 0.17);
-//     }
-//
-// };
 
+// BACKGROUND
+bg = {
+
+    x: 0,
+    dx: 1,
+
+    draw: function () {
+        background.src = "images/bg.png";
+        background.style.position = "absolute";
+        background.style.width = "1000px";
+        background.style.bottom = "0";
+        background.style.left = this.x + 'px';
+        wrapper.appendChild(background);
+        if (width > background.clientWidth) {
+            additionalBackground.src = "images/bg.png";
+            additionalBackground.style.position = "absolute";
+            additionalBackground.style.width = "1000px";
+            additionalBackground.style.bottom = "0";
+            additionalBackground.style.left = (background.clientWidth + this.x) + 'px';
+            wrapper.appendChild(additionalBackground);
+        }
+    },
+
+    update: function () {
+        this.x = this.x - this.dx;
+    }
+};
 
 // DRAW
 function draw() {
-    // ctx.fillStyle = "#70c5ce";
-    // ctx.fillRect(0, 0, cvs.width, cvs.height);
-
-    // bg.draw();
+    bg.draw();
 }
 
 // UPDATE
 function update() {
-
+    bg.update();
 }
-
 
 // LOOP
 function loop() {
+    update();
     draw();
     frames++;
 
