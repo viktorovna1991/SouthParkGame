@@ -29,14 +29,14 @@ bg = {
     draw: function () {
         background.src = "images/bg.png";
         background.style.position = "absolute";
-        background.style.width = "1000px";
+        background.style.width = "1366px";
         background.style.bottom = "0";
         background.style.left = this.x + 'px';
         wrapper.appendChild(background);
-        if (width > background.clientWidth) {
+        if (width >= background.clientWidth) {
             additionalBackground.src = "images/bg.png";
             additionalBackground.style.position = "absolute";
-            additionalBackground.style.width = "1000px";
+            additionalBackground.style.width = "1366px";
             additionalBackground.style.bottom = "0";
             additionalBackground.style.left = (background.clientWidth + this.x) + 'px';
             wrapper.appendChild(additionalBackground);
@@ -44,7 +44,10 @@ bg = {
     },
 
     update: function () {
-        this.x = this.x - this.dx;
+        this.x = (this.x - this.dx)%1365;
+        console.log('x', this.x);
+
+
     }
 };
 
