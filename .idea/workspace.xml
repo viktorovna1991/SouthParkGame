@@ -4,12 +4,27 @@
     <list default="true" id="1da30429-62e6-451a-859a-59da034597cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="SouthPark" />
@@ -40,6 +55,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,7 +76,8 @@
       <workItem from="1585262005805" duration="7691000" />
       <workItem from="1585400083116" duration="5094000" />
       <workItem from="1585407003504" duration="9681000" />
-      <workItem from="1585580153957" duration="7274000" />
+      <workItem from="1585580153957" duration="8871000" />
+      <workItem from="1585657379562" duration="6968000" />
     </task>
     <task id="LOCAL-00001" summary="added css.style file">
       <created>1585410027071</created>
@@ -83,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585580387221</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed running background">
+      <created>1585590490860</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585590490860</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,21 +129,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added css.style file" />
     <MESSAGE value="new running animation of background" />
-    <option name="LAST_COMMIT_MESSAGE" value="new running animation of background" />
+    <MESSAGE value="fixed running background" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed running background" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1585261798282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1585261798282" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585580386492">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585590490546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585580386492" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585580154802">
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585590490546" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1585591686916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585580154802" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585591686916" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585657380415">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585657380415" />
     <state x="375" y="154" key="git4idea.merge.GitPullDialog" timestamp="1585400388807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
