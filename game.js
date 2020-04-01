@@ -40,6 +40,7 @@ cartmans.src = "images/cartman.png";
 var wrapper = document.getElementById("wrapper");
 var background = document.createElement('img');
 var additionalBackground = document.createElement('img');
+var homelessness = document.createElement('img');
 var width = document.body.clientWidth;
 
 // BACKGROUND
@@ -97,14 +98,61 @@ const cartman = {
 
 };
 
+// HOMELESS
+const homeless = {
+    position: [],
+    dx: 4,
+    w: 297,
+
+    draw: function () {
+
+        for (let i = 0; i < this.position.length; i++) {
+            let p = this.position[i];
+            homelessness.src = "images/homeless.png";
+            homelessness.style.position = "absolute";
+            homelessness.style.width = "297px";
+            homelessness.style.bottom = p.y + 'px';
+            homelessness.style.left = p.x + 'px';
+            wrapper.appendChild(homelessness);
+        }
+    },
+
+    update: function () {
+
+        if (frames % 500 === 0) {
+            this.position.push({
+                x: cvs.width,
+                y: 20,
+            });
+        }
+        for (let i = 0; i < this.position.length; i++) {
+            let p = this.position[i];
+
+            // MOVE THE PIPES TO THE LEFT
+            p.x -= this.dx;
+            // if the pipes go beyond canvas, we delete them from the array
+            if (p.x + this.w <= 0) {
+                this.position.shift();
+            }
+        }
+    },
+
+    reset: function () {
+        this.position = [];
+    }
+
+};
+
 // DRAW
 function draw() {
     bg.draw();
+    homeless.draw();
 }
 
 // UPDATE
 function update() {
     bg.update();
+    homeless.update();
 }
 
 function loop2() {
@@ -118,10 +166,12 @@ function loop2() {
     }
     cartman.draw();
     cartman.update();
+
 }
 
 // LOOP
 function loop() {
+
     update();
     draw();
     frames++;
@@ -129,6 +179,7 @@ function loop() {
 
     requestAnimationFrame(loop);
     loop2();
+
 }
 
 loop();
