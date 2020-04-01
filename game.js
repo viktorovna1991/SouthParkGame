@@ -28,6 +28,7 @@ var ct = setupCanvas(document.getElementById('game'));
 
 // GAME VARS AND CONSTS
 let frames = 0;
+let frameCount = 0;
 
 // LOAD SPRITE IMAGE
 const clouds = new Image();
@@ -41,12 +42,11 @@ var background = document.createElement('img');
 var additionalBackground = document.createElement('img');
 var width = document.body.clientWidth;
 
-
 // BACKGROUND
 bg = {
 
     x: 0,
-    dx: 1,
+    dx: 3,
 
     draw: function () {
         background.src = "images/bg.png";
@@ -55,14 +55,12 @@ bg = {
         background.style.bottom = "0";
         background.style.left = this.x + 'px';
         wrapper.appendChild(background);
-        if (width >= background.clientWidth) {
-            additionalBackground.src = "images/bg.png";
-            additionalBackground.style.position = "absolute";
-            additionalBackground.style.width = "1366px";
-            additionalBackground.style.bottom = "0";
-            additionalBackground.style.left = (background.clientWidth + this.x) + 'px';
-            wrapper.appendChild(additionalBackground);
-        }
+        additionalBackground.src = "images/bg.png";
+        additionalBackground.style.position = "absolute";
+        additionalBackground.style.width = "1366px";
+        additionalBackground.style.bottom = "0";
+        additionalBackground.style.left = (background.clientWidth + this.x) + 'px';
+        wrapper.appendChild(additionalBackground);
     },
 
     update: function () {
@@ -70,35 +68,38 @@ bg = {
     }
 };
 
-// CARTMAN
+//CARTMAN
 const cartman = {
     animation: [
-        {sX: 461, sY: 54},
-        {sX: 276, sY: 139},
-        {sX: 276, sY: 164},
-        {sX: 276, sY: 139}
+        {sX: 617, sY: 55},
+        {sX: 762, sY: 56},
+        {sX: 21, sY: 295},
+        {sX: 180, sY: 295},
     ],
     x: 150,
     y: 450,
     w: 133,
     h: 174,
-    dw: 133,
-    dh: 174,
 
     frame: 0,
 
     draw: function () {
+        ctx.clearRect(0, 0, cvs.width, cvs.height);
         let cartman = this.animation[this.frame];
-
-        ctx.drawImage(cartmans, cartman.sX, cartman.sY, this.w, this.h, parseInt(this.x)+ 0.5, parseInt(this.y)+ 0.5, this.dw, this.dh);
+        ctx.drawImage(cartmans, cartman.sX, cartman.sY, this.w, this.h, this.x, this.y, this.w, this.h);
     },
+
+    update: function () {
+        this.period = 7;
+        this.frame = frameCount % this.period === 0 ? 1 : this.frame + 1;
+        this.frame = this.frame % this.animation.length;
+    }
 
 };
 
 // DRAW
 function draw() {
     bg.draw();
-    cartman.draw();
 }
 
 // UPDATE
@@ -106,13 +107,30 @@ function update() {
     bg.update();
 }
 
+function loop2() {
+    if (frameCount < 15) {
+        requestAnimationFrame(loop2);
+        return;
+    }
+    if (frameCount === 16) {
+        frameCount = 0;
+        return;
+    }
+    cartman.draw();
+    cartman.update();
+}
+
 // LOOP
 function loop() {
     update();
     draw();
     frames++;
+    frameCount++;
 
     requestAnimationFrame(loop);
+    loop2();
 }
 
 loop();
+
+
