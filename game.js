@@ -37,17 +37,63 @@ clouds.src = "images/clouds.jpg";
 const cartmans = new Image();
 cartmans.src = "images/cartman.png";
 
+const startButton = new Image();
+startButton.src = "images/press.png";
+
 var wrapper = document.getElementById("wrapper");
 var background = document.createElement('img');
 var additionalBackground = document.createElement('img');
 var homelessness = document.createElement('img');
-var width = document.body.clientWidth;
+
+
+// GAME STATE
+const state = {
+    current: 0,
+    getReady: 0,
+    game: 1,
+    over: 2
+};
+
+// START BUTTON COORD
+const startBtn = {
+    x: 120,
+    y: 263,
+    w: 83,
+    h: 29
+};
+
+var count = 0;
+// CONTROL THE GAME
+cvs.addEventListener("click", function (evt) {
+
+    switch (state.current) {
+        case state.getReady:
+            state.current = state.game;
+            break;
+        case state.game:
+            count = 1;
+            break;
+        case state.over:
+            let rect = cvs.getBoundingClientRect();
+            let clickX = evt.clientX - rect.left;
+            let clickY = evt.clientY - rect.top;
+
+            // CHECK IF WE CLICK ON THE START BUTTON
+            if (clickX >= startBtn.x && clickX <= startBtn.x + startBtn.w && clickY >=
+                startBtn.y && clickY <= startBtn.y + startBtn.h) {
+                homeless.reset();
+                cartman.speedReset();
+                state.current = state.getReady;
+            }
+            break;
+    }
+});
 
 // BACKGROUND
 bg = {
 
     x: 0,
-    dx: 3,
+    dx: 4,
 
     draw: function () {
         background.src = "images/bg.png";
@@ -65,7 +111,9 @@ bg = {
     },
 
     update: function () {
-        this.x = (this.x - this.dx) % 1365;
+        if (state.current === state.game) {
+            this.x = (this.x - this.dx) % 1365;
+        }
     }
 };
 
@@ -82,7 +130,37 @@ const cartman = {
     w: 133,
     h: 174,
 
+    gravity: 3,
+
     frame: 0,
+    animationJump: [
+        {sX: 1, sY: 49},
+        {sX: 155, sY: 0},
+    ],
+    frameJump: 0,
+
+    jumpDraw: function () {
+        ctx.clearRect(0, 0, cvs.width, cvs.height);
+        let cartmanScate = this.animationJump[this.frameJump];
+        ctx.drawImage(cartmans, cartmanScate.sX, cartmanScate.sY, this.w, this.h, this.x, this.y, this.w, this.h);
+    },
+
+    updateJump: function () {
+        if (this.y > 260 && this.frameJump === 0) {
+            this.y = this.y - this.gravity;
+        }
+        if (this.y <= 260) {
+            this.frameJump = 1;
+            this.y = this.y + this.gravity;
+        }
+        if (this.frameJump === 1) {
+            this.y = this.y + this.gravity;
+        }
+        if (this.frameJump === 1 && this.y === 450) {
+            count = 0;
+            this.frameJump = 0;
+        }
+    },
 
     draw: function () {
         ctx.clearRect(0, 0, cvs.width, cvs.height);
@@ -94,6 +172,10 @@ const cartman = {
         this.period = 7;
         this.frame = frameCount % this.period === 0 ? 1 : this.frame + 1;
         this.frame = this.frame % this.animation.length;
+    },
+
+    speedReset: function () {
+        this.gravity = 0;
     }
 
 };
@@ -118,7 +200,7 @@ const homeless = {
     },
 
     update: function () {
-
+        if (state.current !== state.game) return;
         if (frames % 500 === 0) {
             this.position.push({
                 x: cvs.width,
@@ -143,10 +225,28 @@ const homeless = {
 
 };
 
+// GET READY MESSAGE
+const getReady = {
+    sX: 0,
+    sY: 0,
+    w: 662,
+    h: 481,
+    x: cvs.width / 2 - 173 / 2,
+    y: 200,
+
+    draw: function () {
+        if (state.current === state.getReady) {
+            ctx.drawImage(startButton, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h);
+        }
+    }
+
+};
+
 // DRAW
 function draw() {
     bg.draw();
     homeless.draw();
+    getReady.draw();
 }
 
 // UPDATE
@@ -164,18 +264,25 @@ function loop2() {
         frameCount = 0;
         return;
     }
-    cartman.draw();
-    cartman.update();
+    if (count === 0) {
+        cartman.draw();
+        if (state.current === state.game) {
+            cartman.update();
+        }
+    }
 
 }
 
 // LOOP
 function loop() {
-
     update();
     draw();
     frames++;
     frameCount++;
+    if (count === 1) {
+        cartman.jumpDraw();
+        cartman.updateJump();
+    }
 
     requestAnimationFrame(loop);
     loop2();
