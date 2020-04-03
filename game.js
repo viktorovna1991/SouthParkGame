@@ -130,7 +130,9 @@ const cartman = {
     w: 133,
     h: 174,
 
-    gravity: 3,
+    jump: 3,
+
+    speed: 0,
 
     frame: 0,
     animationJump: [
@@ -139,7 +141,7 @@ const cartman = {
     ],
     frameJump: 0,
 
-    jumpDraw: function () {
+    drawJump: function () {
         ctx.clearRect(0, 0, cvs.width, cvs.height);
         let cartmanScate = this.animationJump[this.frameJump];
         ctx.drawImage(cartmans, cartmanScate.sX, cartmanScate.sY, this.w, this.h, this.x, this.y, this.w, this.h);
@@ -147,14 +149,17 @@ const cartman = {
 
     updateJump: function () {
         if (this.y > 260 && this.frameJump === 0) {
-            this.y = this.y - this.gravity;
+            this.x += 7;
+            this.y -= this.jump * 3;
+
         }
         if (this.y <= 260) {
             this.frameJump = 1;
-            this.y = this.y + this.gravity;
+            this.y += this.jump;
         }
         if (this.frameJump === 1) {
-            this.y = this.y + this.gravity;
+            this.x += 2;
+            this.y += this.jump * 5;
         }
         if (this.frameJump === 1 && this.y === 450) {
             count = 0;
@@ -246,7 +251,6 @@ const getReady = {
 function draw() {
     bg.draw();
     homeless.draw();
-    getReady.draw();
 }
 
 // UPDATE
@@ -270,6 +274,7 @@ function loop2() {
             cartman.update();
         }
     }
+    getReady.draw();
 
 }
 
@@ -280,7 +285,7 @@ function loop() {
     frames++;
     frameCount++;
     if (count === 1) {
-        cartman.jumpDraw();
+        cartman.drawJump();
         cartman.updateJump();
     }
 

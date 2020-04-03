@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da30429-62e6-451a-859a-59da034597cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/available-now.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/button1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/button2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/press.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
     </list>
@@ -86,7 +79,8 @@
       <workItem from="1585736661449" duration="435000" />
       <workItem from="1585737124328" duration="14774000" />
       <workItem from="1585824280381" duration="7157000" />
-      <workItem from="1585845447733" duration="5457000" />
+      <workItem from="1585845447733" duration="7001000" />
+      <workItem from="1585900395184" duration="816000" />
     </task>
     <task id="LOCAL-00001" summary="added css.style file">
       <created>1585410027071</created>
@@ -144,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585757403893</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added new images and made start Button">
+      <created>1585853098659</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585853098660</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,17 +171,18 @@
     <MESSAGE value="fixed canvas quality" />
     <MESSAGE value="fixed canvas cartman animation" />
     <MESSAGE value="fixed homeless animation with  cartman animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed homeless animation with  cartman animation" />
+    <MESSAGE value="added new images and made start Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new images and made start Button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1585261798282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1585261798282" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585757403628">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585853098188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585757403628" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585853098188" />
     <state x="457" y="74" key="RollbackChangesDialog" timestamp="1585748401140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -189,14 +191,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585591686916" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1585671842644">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1585853115300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585671842644" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585845448720">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585853115300" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585900397282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585845448720" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585900397282" />
     <state x="375" y="154" key="git4idea.merge.GitPullDialog" timestamp="1585400388807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
