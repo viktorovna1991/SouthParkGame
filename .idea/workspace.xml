@@ -80,7 +80,7 @@
       <workItem from="1585737124328" duration="14774000" />
       <workItem from="1585824280381" duration="7157000" />
       <workItem from="1585845447733" duration="7001000" />
-      <workItem from="1585900395184" duration="816000" />
+      <workItem from="1585900395184" duration="4442000" />
     </task>
     <task id="LOCAL-00001" summary="added css.style file">
       <created>1585410027071</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585853098660</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed the speed of cartman jump">
+      <created>1585901471828</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901471828</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,17 +179,18 @@
     <MESSAGE value="fixed canvas cartman animation" />
     <MESSAGE value="fixed homeless animation with  cartman animation" />
     <MESSAGE value="added new images and made start Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new images and made start Button" />
+    <MESSAGE value="fixed the speed of cartman jump" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the speed of cartman jump" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1585261798282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1585261798282" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585853098188">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585901471314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585853098188" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585901471314" />
     <state x="457" y="74" key="RollbackChangesDialog" timestamp="1585748401140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

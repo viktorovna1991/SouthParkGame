@@ -93,7 +93,7 @@ cvs.addEventListener("click", function (evt) {
 bg = {
 
     x: 0,
-    dx: 4,
+    dx: 6,
 
     draw: function () {
         background.src = "images/bg.png";
@@ -148,20 +148,23 @@ const cartman = {
     },
 
     updateJump: function () {
-        if (this.y > 260 && this.frameJump === 0) {
-            this.x += 7;
-            this.y -= this.jump * 3;
+        if (this.y > 250 && this.frameJump === 0) {
+            for (let i = 5; i > 0; i--) {
+                this.y -= this.jump * i * 0.2;
+            }
 
         }
-        if (this.y <= 260) {
+        if (this.y <= 250) {
             this.frameJump = 1;
             this.y += this.jump;
         }
         if (this.frameJump === 1) {
-            this.x += 2;
-            this.y += this.jump * 5;
+            for (let i = 0; i < 5; i++) {
+                this.y += this.jump * i * 0.2;
+            }
+
         }
-        if (this.frameJump === 1 && this.y === 450) {
+        if (this.frameJump === 1 && this.y >= 450) {
             count = 0;
             this.frameJump = 0;
         }
@@ -188,7 +191,7 @@ const cartman = {
 // HOMELESS
 const homeless = {
     position: [],
-    dx: 4,
+    dx: 6,
     w: 297,
 
     draw: function () {
