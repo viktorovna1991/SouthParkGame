@@ -30,15 +30,28 @@ var ct = setupCanvas(document.getElementById('game'));
 let frames = 0;
 let frameCount = 0;
 
-// LOAD SPRITE IMAGE
-const clouds = new Image();
-clouds.src = "images/clouds.jpg";
+// LOAD SOUNDS
+const HIT_S = new Audio();
+HIT_S.src = "sounds/sp_hey.wav";
 
+const JUMP_S = new Audio();
+JUMP_S.src = "sounds/sp_jump.mp3";
+
+const SKATING_S = new Audio();
+SKATING_S.src = "sounds/sp_skating.mp3";
+
+// LOAD SPRITE IMAGE
 const cartmans = new Image();
 cartmans.src = "images/cartman.png";
 
+const wastedFon = new Image();
+wastedFon.src = "images/death.png";
+
 const startButton = new Image();
 startButton.src = "images/press.png";
+
+const finishButton = new Image();
+finishButton.src = "images/button1.png";
 
 var wrapper = document.getElementById("wrapper");
 var background = document.createElement('img');
@@ -54,12 +67,29 @@ const state = {
     over: 2
 };
 
+// GAME OVER FON
+const deathFon = {
+    sX: 0,
+    sY: 0,
+    w: 1366,
+    h: 768,
+    x: 0,
+    y: 0,
+
+    draw: function () {
+        if (state.current === state.over) {
+            ctx.drawImage(wastedFon, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h);
+        }
+    }
+
+};
+
 // START BUTTON COORD
 const startBtn = {
-    x: 120,
-    y: 263,
-    w: 83,
-    h: 29
+    x: cvs.width / 2 - 102,
+    y: cvs.offsetHeight / 2 - 43,
+    w: 205,
+    h: 87
 };
 
 var count = 0;
@@ -69,6 +99,7 @@ cvs.addEventListener("click", function (evt) {
     switch (state.current) {
         case state.getReady:
             state.current = state.game;
+            SKATING_S.play();
             break;
         case state.game:
             count = 1;
@@ -149,6 +180,7 @@ const cartman = {
 
     updateJump: function () {
         if (this.y > 250 && this.frameJump === 0) {
+            JUMP_S.play();
             for (let i = 5; i > 0; i--) {
                 this.y -= this.jump * i * 0.2;
             }
@@ -205,7 +237,6 @@ const homeless = {
             homelessness.style.width = "297px";
             homelessness.style.bottom = p.y + 'px';
             homelessness.style.left = p.x + 'px';
-            // homelessness.style.transform = 'rotate('+180+'deg)';
             wrapper.appendChild(homelessness);
         }
     },
@@ -225,6 +256,7 @@ const homeless = {
 
             // BOTTOM HOMELESS
             if ((m.includes(p.x)) && (cartman.y === 450)) {
+                HIT_S.play();
                 state.current = state.over;
             }
 
@@ -260,6 +292,25 @@ const getReady = {
     }
 
 };
+console.log('w', window.innerWidth);
+console.log('h', window.innerHeight);
+
+// GAME OVER MESSAGE
+const gameOver = {
+    sX: 0,
+    sY: 0,
+    w: 205,
+    h: 87,
+    x: window.innerWidth / 2 - 102,
+    y: window.innerHeight / 2 - 43,
+
+    draw: function () {
+        if (state.current === state.over) {
+            ctx.drawImage(finishButton, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h);
+        }
+    }
+
+};
 
 // DRAW
 function draw() {
@@ -288,7 +339,11 @@ function loop2() {
             cartman.update();
         }
     }
+    if (state.current === state.over) {
+        deathFon.draw();
+    }
     getReady.draw();
+    gameOver.draw();
 
 }
 
