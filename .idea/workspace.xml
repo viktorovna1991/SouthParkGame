@@ -4,6 +4,7 @@
     <list default="true" id="1da30429-62e6-451a-859a-59da034597cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,11 @@
       <workItem from="1585737124328" duration="14774000" />
       <workItem from="1585824280381" duration="7157000" />
       <workItem from="1585845447733" duration="7001000" />
-      <workItem from="1585900395184" duration="4442000" />
+      <workItem from="1585900395184" duration="7163000" />
+      <workItem from="1585919890556" duration="17101000" />
+      <workItem from="1585937194600" duration="630000" />
+      <workItem from="1586079132299" duration="540000" />
+      <workItem from="1586079934190" duration="887000" />
     </task>
     <task id="LOCAL-00001" summary="added css.style file">
       <created>1585410027071</created>
@@ -152,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585901471828</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed animation of cartman jump">
+      <created>1585905014203</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585905014203</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,17 +192,18 @@
     <MESSAGE value="fixed homeless animation with  cartman animation" />
     <MESSAGE value="added new images and made start Button" />
     <MESSAGE value="fixed the speed of cartman jump" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the speed of cartman jump" />
+    <MESSAGE value="fixed animation of cartman jump" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed animation of cartman jump" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1585261798282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1585261798282" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585901471314">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585905013833">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585901471314" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585905013833" />
     <state x="457" y="74" key="RollbackChangesDialog" timestamp="1585748401140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -203,10 +216,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585853115300" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585900397282">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1586079934827">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585900397282" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586079934827" />
     <state x="375" y="154" key="git4idea.merge.GitPullDialog" timestamp="1585400388807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

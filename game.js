@@ -174,6 +174,7 @@ const cartman = {
         ctx.clearRect(0, 0, cvs.width, cvs.height);
         let cartman = this.animation[this.frame];
         ctx.drawImage(cartmans, cartman.sX, cartman.sY, this.w, this.h, this.x, this.y, this.w, this.h);
+
     },
 
     update: function () {
@@ -193,6 +194,7 @@ const homeless = {
     position: [],
     dx: 6,
     w: 297,
+    h: 131,
 
     draw: function () {
 
@@ -203,6 +205,7 @@ const homeless = {
             homelessness.style.width = "297px";
             homelessness.style.bottom = p.y + 'px';
             homelessness.style.left = p.x + 'px';
+            // homelessness.style.transform = 'rotate('+180+'deg)';
             wrapper.appendChild(homelessness);
         }
     },
@@ -215,11 +218,19 @@ const homeless = {
                 y: 20,
             });
         }
+        let m = [267, 266, 265, 264, 263, 262, 261, 260, 259];
+
         for (let i = 0; i < this.position.length; i++) {
             let p = this.position[i];
 
+            // BOTTOM HOMELESS
+            if ((m.includes(p.x)) && (cartman.y === 450)) {
+                state.current = state.over;
+            }
+
             // MOVE THE PIPES TO THE LEFT
             p.x -= this.dx;
+
             // if the pipes go beyond canvas, we delete them from the array
             if (p.x + this.w <= 0) {
                 this.position.shift();
