@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da30429-62e6-451a-859a-59da034597cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sounds/Title1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/main.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/run.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/click.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
     </list>
@@ -89,7 +87,7 @@
       <workItem from="1585937194600" duration="630000" />
       <workItem from="1586079132299" duration="540000" />
       <workItem from="1586079934190" duration="9268000" />
-      <workItem from="1586209916154" duration="5037000" />
+      <workItem from="1586209916154" duration="6222000" />
     </task>
     <task id="LOCAL-00001" summary="added css.style file">
       <created>1585410027071</created>
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586107995577</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added new sounds">
+      <created>1586215681433</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586215681433</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +217,8 @@
     <MESSAGE value="fixed the speed of cartman jump" />
     <MESSAGE value="fixed animation of cartman jump" />
     <MESSAGE value="added sounds to the mouvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sounds to the mouvements" />
+    <MESSAGE value="added new sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new sounds" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1585261798282">
@@ -223,10 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586211410446" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1586107995208">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1586215680943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586107995208" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586215680943" />
     <state x="457" y="74" key="RollbackChangesDialog" timestamp="1585748401140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

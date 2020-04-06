@@ -37,6 +37,9 @@ HIT_S.src = "sounds/sp_hey.wav";
 const JUMP_S = new Audio();
 JUMP_S.src = "sounds/sp_jump.mp3";
 
+const CLICK_S = new Audio();
+CLICK_S.src = "sounds/click.wav";
+
 const SKATING_S = new Audio();
 SKATING_S.src = "sounds/run.wav";
 
@@ -106,6 +109,7 @@ cvs.addEventListener("click", function (evt) {
     switch (state.current) {
         case state.getReady:
             state.current = state.game;
+            CLICK_S.play();
             break;
         case state.game:
             count = 1;
@@ -118,6 +122,7 @@ cvs.addEventListener("click", function (evt) {
             // CHECK IF WE CLICK ON THE START BUTTON
             if (clickX >= startBtn.x && clickX <= startBtn.x + startBtn.w && clickY >=
                 startBtn.y && clickY <= startBtn.y + startBtn.h) {
+                CLICK_S.play();
                 homeless.reset();
                 cartman.speedReset();
                 state.current = state.getReady;
