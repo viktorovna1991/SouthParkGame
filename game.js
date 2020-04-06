@@ -38,7 +38,14 @@ const JUMP_S = new Audio();
 JUMP_S.src = "sounds/sp_jump.mp3";
 
 const SKATING_S = new Audio();
-SKATING_S.src = "sounds/sp_skating.mp3";
+SKATING_S.src = "sounds/run.wav";
+
+const MAIN_S = new Audio();
+MAIN_S.src = "sounds/main.wav";
+MAIN_S.autoplay = true;
+
+const TITLE_S = new Audio();
+TITLE_S.src = "sounds/Title1.mp3";
 
 // LOAD SPRITE IMAGE
 const cartmans = new Image();
@@ -99,7 +106,6 @@ cvs.addEventListener("click", function (evt) {
     switch (state.current) {
         case state.getReady:
             state.current = state.game;
-            SKATING_S.play();
             break;
         case state.game:
             count = 1;
@@ -213,6 +219,7 @@ const cartman = {
         this.period = 7;
         this.frame = frameCount % this.period === 0 ? 1 : this.frame + 1;
         this.frame = this.frame % this.animation.length;
+        SKATING_S.play();
     },
 
     speedReset: function () {
@@ -292,8 +299,7 @@ const getReady = {
     }
 
 };
-console.log('w', window.innerWidth);
-console.log('h', window.innerHeight);
+
 
 // GAME OVER MESSAGE
 const gameOver = {
@@ -342,6 +348,9 @@ function loop2() {
     if (state.current === state.over) {
         deathFon.draw();
     }
+    if (state.current === state.game) {
+        MAIN_S.play();
+    }
     getReady.draw();
     gameOver.draw();
 
@@ -364,5 +373,4 @@ function loop() {
 }
 
 loop();
-
 
