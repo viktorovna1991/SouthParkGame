@@ -108,6 +108,10 @@ cvs.addEventListener("click", function (evt) {
 
     switch (state.current) {
         case state.getReady:
+            if (TITLE_S) {
+                TITLE_S.pause();
+                TITLE_S.currentTime = 0;
+            }
             state.current = state.game;
             CLICK_S.play();
             break;
@@ -126,6 +130,7 @@ cvs.addEventListener("click", function (evt) {
                 homeless.reset();
                 cartman.speedReset();
                 state.current = state.getReady;
+                TITLE_S.play();
             }
             break;
     }
@@ -356,6 +361,7 @@ function loop2() {
     if (state.current === state.game) {
         MAIN_S.play();
     }
+
     getReady.draw();
     gameOver.draw();
 
@@ -378,4 +384,3 @@ function loop() {
 }
 
 loop();
-
