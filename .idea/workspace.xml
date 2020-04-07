@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da30429-62e6-451a-859a-59da034597cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/available-now.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/button1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/button2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/press.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
     </list>
@@ -56,7 +49,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sounds" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -64,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cheater-xg\IdeaProjects\SouthPark\sounds" />
       <recent name="C:\Users\Cheater-xg\IdeaProjects\SouthPark\images" />
     </key>
   </component>
@@ -86,7 +80,14 @@
       <workItem from="1585736661449" duration="435000" />
       <workItem from="1585737124328" duration="14774000" />
       <workItem from="1585824280381" duration="7157000" />
-      <workItem from="1585845447733" duration="5457000" />
+      <workItem from="1585845447733" duration="7001000" />
+      <workItem from="1585900395184" duration="7163000" />
+      <workItem from="1585919890556" duration="17101000" />
+      <workItem from="1585937194600" duration="630000" />
+      <workItem from="1586079132299" duration="540000" />
+      <workItem from="1586079934190" duration="9268000" />
+      <workItem from="1586209916154" duration="6222000" />
+      <workItem from="1586245801998" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="added css.style file">
       <created>1585410027071</created>
@@ -144,7 +145,49 @@
       <option name="project" value="LOCAL" />
       <updated>1585757403893</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added new images and made start Button">
+      <created>1585853098659</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585853098660</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fixed the speed of cartman jump">
+      <created>1585901471828</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901471828</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed animation of cartman jump">
+      <created>1585905014203</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585905014203</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed animation of cartman jump">
+      <created>1586080830607</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1586080830607</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added sounds to the mouvements">
+      <created>1586107995577</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1586107995577</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added new sounds">
+      <created>1586215681433</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586215681433</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,17 +213,26 @@
     <MESSAGE value="fixed canvas quality" />
     <MESSAGE value="fixed canvas cartman animation" />
     <MESSAGE value="fixed homeless animation with  cartman animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed homeless animation with  cartman animation" />
+    <MESSAGE value="added new images and made start Button" />
+    <MESSAGE value="fixed the speed of cartman jump" />
+    <MESSAGE value="fixed animation of cartman jump" />
+    <MESSAGE value="added sounds to the mouvements" />
+    <MESSAGE value="added new sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new sounds" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Project_Structure" timestamp="1585261798282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1585261798282" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585757403628">
+    <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586211410446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585757403628" />
+    <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586211410446" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1586217057248">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586217057248" />
     <state x="457" y="74" key="RollbackChangesDialog" timestamp="1585748401140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -189,14 +241,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585591686916" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1585671842644">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1585853115300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585671842644" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585845448720">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585853115300" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1586245815720">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585845448720" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586245815720" />
     <state x="375" y="154" key="git4idea.merge.GitPullDialog" timestamp="1585400388807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
